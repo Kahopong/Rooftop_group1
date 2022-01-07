@@ -1,0 +1,64 @@
+:root {
+  --color1: #40bab3;
+  --color2: #030e4c;
+  --color3: #ffd335;
+  --color4: #cd0000;
+  --color5: #297373;
+}
+.dbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.form1 {
+  margin: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border: 2px solid var(--color1);
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.25);
+}
+.beour {
+  background-color: var(--color1);
+  padding: 20px;
+  color: white;
+  align-items: center;
+  text-align: center;
+  border-top-left-radius: 27px;
+  border-top-right-radius: 27px;
+}
+.d1 {
+  margin-top: 50px;
+}
+.dbox .row {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 20%;
+  padding-top: 10px;
+}
+
+#sexg,
+#sexb {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#email,
+#password,
+#fname,
+#sname,
+#uname,
+#tel {
+  border-radius: 30px;
+  background-color: #dfdfdf;
+  border-color: #dfdfdf;
+  width: 200px;
+}
+.form1 .signupSubmit {
+  margin-left: 40%;
+  width: 20%;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  background-color: var(--color3);
+}

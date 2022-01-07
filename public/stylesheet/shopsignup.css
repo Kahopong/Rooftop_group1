@@ -1,0 +1,50 @@
+:root {
+    --color1: #40bab3;
+    --color2: #030e4c;
+    --color3: #ffd335;
+    --color4: #cd0000;
+    --color5: #297373;
+  }
+.form2{
+    margin:100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 2px solid var(--color1);
+    border-radius: 30px;;
+}
+.BeourH{
+    background-color: var(--color1);
+    padding: 20px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+}
+.form2 .row{
+    padding-left:20%;
+}
+
+.form2 .row2{
+    padding-top: 50px;
+}
+.form2 .row3{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.form2 #email2,#password2,#CompanyN,#Tel2{
+    border-radius: 30px;
+    background-color: #DFDFDF;
+    border-color:#DFDFDF ;
+    width: 60%;
+}
+
+.form2 .btn-warning{
+    margin-left: 40%;
+    width: 20%;
+    border-radius: 30px;
+    margin-top: 80px;
+    margin-bottom: 60px;;
+    background-color: var(--color3);
+  
+  }
