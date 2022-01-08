@@ -314,3 +314,53 @@ button#submit-btn:hover::after {
   border: 1px solid rgba(66, 193, 198, 0.75);
   color: rgba(66, 193, 198, 0.75);
 }
+
+/* litres input */
+.litres_input {
+  width: 150px;
+  height: 32px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  flex-wrap: nowrap;
+}
+.litres_input_label {
+  color: var(--color2);
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.litres_input input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-left: 15px;
+  width: 110px;
+  color: var(--color2);
+  font-size: 14px;
+}
+
+/* number input */
+.num_input {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.num_input p {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 64px;
+  color: var(--color4);
+  margin: 0 24px;
+}
+
+.num_input i {
+  font-size: 40px;
+  color: #f5f5f5;
+}
+
+.num_input i:hover {
+  font-size: 40px;
+  color: var(--color3);
+}
