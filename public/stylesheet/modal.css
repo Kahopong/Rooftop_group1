@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+/* ====== General Info ====== */
+:root {
+  --color1: #f9f6ed;
+  --color2: #221f20;
+  --color3: #42c1c6;
+  --color4: #788985;
+}
+* {
+  font-family: "Barlow", sans-serif;
+  /* width of iphoneX */
+  width: 375px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+/* below can remove */
+.card,
+#exampleModal {
+  height: 80vh;
+}
+
+/* ====== Modal Part CSS ====== */
+/* check now btn */
+.statusbtn,
+.savebtn {
+  background-color: var(--color3);
+}
