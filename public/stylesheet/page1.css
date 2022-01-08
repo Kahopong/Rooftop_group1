@@ -372,3 +372,237 @@ input.question__input {
     padding: 5px 10px;
     resize: none;
 }
+
+
+/* @@@@@@@@@@@@@@@ */
+
+
+/* Fanki's code below modal!! */
+
+
+/* Modal */
+
+.modal-dialog,
+.modal-content {
+    width: 327px;
+    background: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.modal-dialog {
+    top: 149px;
+    margin: 0 auto;
+}
+
+
+/* "X" Button */
+
+.modal-close {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 5px 0 0;
+}
+
+.closebtn {
+    border: none;
+    background-color: transparent;
+}
+
+.closebtn i {
+    color: var(--color4);
+    font-size: 25px;
+}
+
+
+/* Header */
+
+.modalheader {
+    text-align: center;
+}
+
+
+/* label */
+
+.question_label {
+    height: 140px;
+    width: 140px;
+    border-radius: 16px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color4);
+    text-align: center;
+}
+
+.question_label .fa-check {
+    font-size: 50px;
+    color: var(--color4);
+}
+
+.question_label .fa-times {
+    font-size: 67px;
+    color: var(--color4);
+}
+
+.input_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.question_input:checked+.question_label {
+    background-color: var(--color3);
+    color: white;
+}
+
+.question_input:checked+.question_label i,
+.question_label p {
+    color: white;
+}
+
+.question_input {
+    visibility: hidden;
+}
+
+
+/* Remarks */
+
+.question_remarks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.question_remarks .remarks {
+    color: var(--color4);
+    font-size: 14px;
+}
+
+.question_remarks_textInput {
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    border-bottom: 1px solid var(--color4);
+    width: -webkit-fill-available;
+}
+
+
+/* Dropdown */
+
+.question_others {
+    margin-bottom: 24px;
+    margin-top: 16px;
+}
+
+.question_dropdown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_dropdown .custom-select {
+    font-size: 13px;
+    background: #f5f5f5;
+    border-radius: 16px;
+    color: var(--color4);
+    text-align: center;
+    width: 140px;
+    height: 32px;
+    border: none;
+}
+
+.question_dropdown .options {
+    color: var(--color2);
+}
+
+.question_dropdown .btn-group:first-child {
+    margin-right: 7px;
+}
+
+
+/* Save button */
+
+.modal_submit {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body .savebtn {
+    width: 104px;
+    height: 28px;
+    background: rgba(66, 193, 198, 0.75);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 59px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 20px;
+    margin-bottom: 23px;
+}
+
+.modal-body .savebtn:hover {
+    background: white;
+    border: 1px solid rgba(66, 193, 198, 0.75);
+    color: rgba(66, 193, 198, 0.75);
+}
+
+
+/* litres input */
+
+.litres_input {
+    width: 150px;
+    height: 32px;
+    background: #f5f5f5;
+    border-radius: 16px;
+    flex-wrap: nowrap;
+}
+
+.litres_input_label {
+    color: var(--color2);
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.litres_input input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 15px;
+    width: 110px;
+    color: var(--color2);
+    font-size: 14px;
+}
+
+
+/* number input */
+
+.num_input {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.num_input p {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--color4);
+    margin: 0 24px;
+}
+
+.num_input i {
+    font-size: 40px;
+    color: #f5f5f5;
+}
+
+.num_input i:hover {
+    font-size: 40px;
+    color: var(--color3);
+}

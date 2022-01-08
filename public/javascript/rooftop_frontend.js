@@ -52,7 +52,7 @@ const checkNextButton = () => {
 nextBtn.addEventListener('click', () => {
     current_step++;
     let previous_step = current_step - 1;
-    checkNextButton()
+
     if ((current_step > 0) && (current_step <= stepCount)) {
         prevBtn.classList.remove('d-none');
         prevBtn.classList.add('d-inline-block');
@@ -75,12 +75,13 @@ nextBtn.addEventListener('click', () => {
         // }
 
     }
+    checkNextButton()
     activeDot(current_step);
 });
 
 // Click prev btn
 prevBtn.addEventListener('click', () => {
-    checkNextButton()
+
     if (current_step > 0) {
         current_step--;
         let previous_step = current_step + 1;
@@ -104,5 +105,6 @@ prevBtn.addEventListener('click', () => {
         prevBtn.classList.remove('d-inline-block');
         prevBtn.classList.add('d-none');
     }
+    checkNextButton()
     activeDot(current_step);
 });
