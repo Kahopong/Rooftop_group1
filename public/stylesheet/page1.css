@@ -406,7 +406,7 @@ input.question__input {
   text-align: center;
 }
 
-/* label */
+/* tick & cross label */
 
 .question_label {
   height: 140px;
@@ -536,7 +536,7 @@ input.question__input {
 /* litres input */
 
 .litres_input {
-  width: 150px;
+  width: 140px;
   height: 32px;
   background: #f5f5f5;
   border-radius: 16px;
@@ -547,6 +547,7 @@ input.question__input {
   color: var(--color2);
   font-size: 14px;
   line-height: 14px;
+  margin-top: 8px;
 }
 
 .litres_input input {
@@ -557,6 +558,49 @@ input.question__input {
   width: 110px;
   color: var(--color2);
   font-size: 14px;
+  margin-top: 2px;
+}
+
+/* Harvest 6-6 col */
+.question_harvest_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question_harvest_row .input-group {
+  background: #f5f5f5;
+  border: none;
+  width: 140px;
+  font-size: 14px;
+}
+
+.question_harvest_row .input-group-select {
+  height: 32px;
+  border-radius: 16px;
+}
+
+/* Harvest 12 col */
+.question_harvest_12row .question_dropdown .custom-select {
+  width: 293px;
+}
+
+/* harvest add btn */
+.add_harvest_btn {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add_harvest_btn i {
+  font-size: 40px;
+  color: #f5f5f5;
+}
+
+.add_harvest_btn i:hover {
+  font-size: 40px;
+  color: var(--color3);
 }
 
 /* number input */
@@ -574,6 +618,7 @@ input.question__input {
   line-height: 64px;
   color: var(--color4);
   margin: 0 24px;
+  background-color: transparent;
 }
 
 .num_input i {

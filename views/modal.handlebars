@@ -102,12 +102,7 @@
                                                     <label class="remarks" for="s2q1_remarks">Remarks:</label>
                                                     <input class="question_remarks_textInput" id="s2q1_remarks" name="s2q1_remarks" type="text">
                                                 </div>
-                                                <!--  @@@@@@@@@@@@@ -/+ button  @@@@@@@@@@@@@-->
-                                                <div class="num_input">
-                                                    <i class="fas fa-minus-circle"></i>
-                                                    <p>0</p>
-                                                    <i class="fas fa-plus-circle"></i>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <!-- Planting : Q2 -->
@@ -285,7 +280,7 @@
                                             <div class="input-group mb-3 litres_input">
                                                 <input type="text" placeholder="12345678" id="s3q3_remarks" name="s3q3">
                                                 <div>
-                                                    <span class="litres_input_label" id="basic-addon2">litres</span>
+                                                    <p class="litres_input_label" id="basic-addon2">litres</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -322,7 +317,7 @@
                         <span> Completed</span>
                     </button>
                     {{!-- Modal S4 Grooming --}}
-                    <div class="modal fade" id="modals4" tabindex="-1" aria-labelledby="modals3" aria-hidden="true">
+                    <div class="modal fade" id="modals4" tabindex="-1" aria-labelledby="modals4" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-close">
@@ -407,20 +402,80 @@
                 <h1 class='section-title'>Harvest</h1>
                 <div class='section-content'>
                     <img src='./Harvest.PNG' alt='irrigation' class='plant-image'>
-                    <button class='check-now-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='check-now-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals5">
                         <span class='tick-container'></span>
                         <span> Check Now</span>
                     </button>
-                    <button class='partly-checked-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='partly-checked-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals5">
                         <span class='tick-container'></span>
                         <span> Partly Checked</span>
                     </button>
-                    <button class='completed-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='completed-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals5">
                         <span class='tick-container d-flex justify-content-center'>
                             <i class="fas fa-check"></i>
                         </span>
                         <span> Completed</span>
                     </button>
+                    {{!-- Modal S5 Harvest --}}
+                    <div class="modal fade" id="modals5" tabindex="-1" aria-labelledby="modals5" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-close">
+                                    <button type="button" class="closebtn" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+                                </div>
+                                <div class="modalheader">
+                                    <h4>Grooming</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- S5 - Harvest : Q1 -->
+                                    <div class="question_others question_harvest_row">
+                                        <div>
+                                            <p>Crop Type</p>
+                                            <div class="question_dropdown">
+                                                <select class="custom-select" name="s5q1_croptype" id="s5q1_croptype" >
+                                                    <option selected>Please select</option>
+                                                    <option class="options" value="Beet">Beet</option>
+                                                    <option class="options" value="Bak Choi">Bak Choi</option>
+                                                    <option class="options" value="Choi Sum">Choi Sum</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- S5 - Harvest : Q2 -->
+                                        <div>
+                                            <p>Weight</p>
+                                            <div>
+                                                <div class="input-group mb-3 litres_input">
+                                                    <input type="text" placeholder="2.13" id="s5q2_weight" name="s5q1">
+                                                    <div>
+                                                        <p class="litres_input_label" id="basic-addon2">kg</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- S5 - Harvest : Q3 -->
+                                    <div class="question_others question_harvest_12row">
+                                        <div>
+                                            <p>Status</p>
+                                            <div class="question_dropdown">
+                                                <select class="custom-select" name="s5q3_status" id="s5q3_status" >
+                                                    <option selected>Please select</option>
+                                                    <option class="options" value="Beet">End Cycle</option>
+                                                    <option class="options" value="Bak Choi">Harvested</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add_harvest_btn">
+                                        <i class="fas fa-plus-circle"></i>
+                                    </div>
+                                    <div class="modal_submit">
+                                        <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             </div>
@@ -431,20 +486,125 @@
                 <h1 class='section-title'>Garden Management</h1>
                 <div class='section-content'>
                     <img src='./Garden_Management.PNG' alt='irrigation' class='plant-image'>
-                    <button class='check-now-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='check-now-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals6">
                         <span class='tick-container'></span>
                         <span> Check Now</span>
                     </button>
-                    <button class='partly-checked-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='partly-checked-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals6">
                         <span class='tick-container'></span>
                         <span> Partly Checked</span>
                     </button>
-                    <button class='completed-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='completed-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals6">
                         <span class='tick-container d-flex justify-content-center'>
                             <i class="fas fa-check"></i>
                         </span>
                         <span> Completed</span>
                     </button>
+                    {{!-- modal section 6 --}}
+                    <div class="modal fade" id="modals6" tabindex="-1" aria-labelledby="modals6" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-close">
+                                    <button type="button" class="closebtn" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+                                </div>
+                                <div class="modalheader">
+                                    <h4>Garden Management</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- S6 - Garden Management : Q1 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <p>Composter - any special issues?</p>
+                                        <div class="input_btn">
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s6q1_yes" name="s6q1" type="radio" value="Yes">
+                                                <label class="form-check-label question_label" for="s6q1_yes">
+                                                    <i class="fas fa-check"></i> Yes, state below</label>
+                                            </div>
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s6q1_no" name="s6q1" type="radio" value="No">
+                                                <label class="form-check-label question_label" for="s6q1_no">
+                                                    <i class="fas fa-times"></i> No special issues</label>
+                                            </div>
+                                        </div>
+                                            <div class="question_others">
+                                                <div class="question_remarks">
+                                                    <label class="remarks" for="s6q1_remarks">Remarks:</label>
+                                                    <input class="question_remarks_textInput" id="s6q1_remarks" name="s6q1_remarks" type="text">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <!-- S6 - Garden Management : Q2 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <div class="question_others">
+                                            <p>2. No. of garden waste bag(s) collected </p>
+                                            <div class="num_input">
+                                                <i class="fas fa-minus-circle"></i>
+                                                <p>0</p>
+                                                <i class="fas fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- S6 - Garden Management : Q3 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <p>3. Farm supplies require any refill?</p>
+                                        <div class="input_btn">
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s6q3_yes" name="s6q3" type="radio" value="Yes">
+                                                <label class="form-check-label question_label" for="s6q3_yes">
+                                                    <i class="fas fa-check"></i> Yes, state below</label>
+                                            </div>
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s6q3_no" name="s6q3" type="radio" value="No">
+                                                <label class="form-check-label question_label" for="s6q3_no">
+                                                    <i class="fas fa-times"></i> No refill needed</label>
+                                            </div>
+                                        </div>
+                                        <div class="question_others">
+                                            <div class="question_dropdown">
+                                                <select class="custom-select" name="s6q3_item">
+                                                    <option selected>Item</option>
+                                                    <option class="options" value="Item A">Item A</option>
+                                                    <option class="options" value="Item B">Item B</option>
+                                                    <option class="options" value="Item C">Item C</option>
+                                                </select>
+                                                <select class="custom-select" name="s6q3_quantity">
+                                                    <option selected>Quantity</option>
+                                                    <option class="options" value="1">1</option>
+                                                    <option class="options" value="2">2</option>
+                                                    <option class="options" value="3">3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- S6 - Garden Management : Q1 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <p>4. Field and Storeroom - any special issues?</p>
+                                        <div class="input_btn">
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s6q4_yes" name="s6q4" type="radio" value="Yes">
+                                                <label class="form-check-label question_label" for="s6q4_yes">
+                                                    <i class="fas fa-check"></i> Yes, state below</label>
+                                            </div>
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s6q4_no" name="s6q4" type="radio" value="No">
+                                                <label class="form-check-label question_label" for="s6q4_no">
+                                                    <i class="fas fa-times"></i> No special issues</label>
+                                            </div>
+                                        </div>
+                                            <div class="question_others">
+                                                <div class="question_remarks">
+                                                    <label class="remarks" for="s6q4_remarks">Remarks:</label>
+                                                    <input class="question_remarks_textInput" id="s6q4_remarks" name="s6q4_remarks" type="text">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="modal_submit">
+                                        <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             </div>
