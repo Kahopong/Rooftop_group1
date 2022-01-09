@@ -406,6 +406,10 @@ input.question__input {
   text-align: center;
 }
 
+.form-check > p {
+  margin-top: 10px;
+}
+
 /* tick & cross label */
 
 .question_label {
@@ -479,6 +483,10 @@ input.question__input {
 .question_others {
   margin-bottom: 24px;
   margin-top: 16px;
+}
+
+.hide_other {
+  display: none;
 }
 
 .question_dropdown {
