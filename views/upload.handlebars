@@ -1,0 +1,50 @@
+<div class='main-body-container d-flex flex-column justify-content-center align-items-center'>
+    <h1 id='upload-title'>Upload Image of a Plant</h1>
+    <form  id='image-form'  enctype="multipart/form-data" class='d-flex justify-content-between'>
+        <label class='upload d-flex justify-content-center align-items-center'>Choose Image<input type="file" accept="image/jpeg" name="upload" id="myFile"  onchange="uploadFunction()" value="Hello" />
+        </label>
+        <input class='submit' type="submit" value="Upload" id='upload-submit'/>
+    </form>
+        {{!-- <button class='submit' id='upload-submit'>Upload</button> --}}
+<div id='fileInformation'></div>
+</div>
+<div style='height: 100px;'></div>
+
+<script>
+    function uploadFunction() {
+            let x = document.getElementById("myFile");
+            let txt = "";
+
+            if ("files" in x) {
+                if (x.files.length == 0) {
+                    txt = "Select one or more files.";
+                } else {
+                    for (var i = 0; i < x.files.length; i++) {
+                        txt += "<br><strong>" + (i + 1) + ". file</strong><br>";
+                        var file = x.files[i];
+                        if ("name" in file) {
+                            txt += "name: " + file.name + "<br>";
+                        }
+                        if ("size" in file) {
+                            txt += "size: " + file.size + " bytes <br>";
+                        }
+                    }
+                }
+            } else {
+                if (x.value == "") {
+                    txt += "Select one or more files.";
+                } else {
+                    txt += "The files property is not supported by your browser!";
+                    txt += "<br>The path of the selected file: " + x.value;
+                }
+            }
+            document.getElementById("fileInformation").innerHTML = txt;
+        }
+
+let imageForm = document.getElementById('image-form');
+imageForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    window.location.href= "/success-upload"
+})
+
+</script>

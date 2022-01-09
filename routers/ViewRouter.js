@@ -16,8 +16,16 @@ class ViewRouter {
             });
         });
 
-        router.get("/sections", (req, res) => {
-            res.render("sections");
+        router.get("/index", (req, res) => {
+            res.render("index");
+        });
+
+        router.get("/upload", (req, res) => {
+            res.render("upload");
+        });
+
+        router.get("/success-upload", (req, res) => {
+            res.render("success-upload");
         });
 
 
