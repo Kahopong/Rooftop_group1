@@ -1,8 +1,19 @@
+//  S4 - grooming
+exports.up = function (knex) {
+  knex.schema.createTable("grooming", (table) => {
+    table.increments();
+    table.integer("farmlog_id");
+    table.foreign("farmlog_id").references("farmlog.id");
+    table.string("s4q1");
+    table.string("s4q1_pest");
+    table.string("s4q1_usage");
+    table.string("s4q2");
+    table.string("s4q3");
+    table.string("s4q4");
 
-exports.up = function(knex) {
-  
+    table.timestamps(false, true);
+  });
 };
-
-exports.down = function(knex) {
-  
+exports.down = function (knex) {
+  knex.schema.dropTable("grooming");
 };
