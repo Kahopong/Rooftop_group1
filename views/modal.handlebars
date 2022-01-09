@@ -307,20 +307,96 @@
                 <h1 class='section-title'>Grooming</h1>
                 <div class='section-content'>
                     <img src='./Grooming.PNG' alt='irrigation' class='plant-image'>
-                    <button class='check-now-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='check-now-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals4">
                         <span class='tick-container'></span>
                         <span> Check Now</span>
                     </button>
-                    <button class='partly-checked-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='partly-checked-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals4">
                         <span class='tick-container'></span>
                         <span> Partly Checked</span>
                     </button>
-                    <button class='completed-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#(FILL_IN_modal_id)">
+                    <button class='completed-btn d-flex align-items-center' data-bs-toggle="modal" data-bs-target="#modals4">
                         <span class='tick-container d-flex justify-content-center'>
                             <i class="fas fa-check"></i>
                         </span>
                         <span> Completed</span>
                     </button>
+                    {{!-- Modal S4 Grooming --}}
+                    <div class="modal fade" id="modals4" tabindex="-1" aria-labelledby="modals3" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-close">
+                                    <button type="button" class="closebtn" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+                                </div>
+                                <div class="modalheader">
+                                    <h4>Grooming</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- S4 - Grooming : Q1 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <p>1. Any pest control substances? </p>
+                                        <div class="input_btn">
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s4q1_yes" name="s4q1" type="radio" value="Yes">
+                                                <label class="form-check-label question_label" for="s4q1_yes">
+                                                    <i class="fas fa-check"></i> Yes, state below</label>
+                                            </div>
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s4q1_no" name="s4q1" type="radio" value="No">
+                                                <label class="form-check-label question_label" for="s4q1_no">
+                                                    <i class="fas fa-times"></i> No special issues</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- S4 - Grooming : Q2 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <p>2. Any pruning?</p>
+                                        <div class="input_btn">
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s4q1_yes" name="s4q1" type="radio" value="Yes">
+                                                <label class="form-check-label question_label" for="s4q1_yes">
+                                                    <i class="fas fa-check"></i> Yes, state below</label>
+                                            </div>
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s4q1_no" name="s4q1" type="radio" value="No">
+                                                <label class="form-check-label question_label" for="s4q1_no">
+                                                    <i class="fas fa-times"></i> No special issues</label>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <!-- S4 - Grooming : Q3 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <p>3. Any weeding? </p>
+                                        <div class="input_btn">
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s4q1_yes" name="s4q1" type="radio" value="Yes">
+                                                <label class="form-check-label question_label" for="s4q1_yes">
+                                                    <i class="fas fa-check"></i> Yes, state below</label>
+                                            </div>
+                                            <div class="q-box__question">
+                                                <input class="form-check-input question_input" id="s4q1_no" name="s4q1" type="radio" value="No">
+                                                <label class="form-check-label question_label" for="s4q1_no">
+                                                    <i class="fas fa-times"></i> No special issues</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- S4 - Grooming : Q4 -->
+                                    <div class="form-check ps-0 q-box">
+                                        <p>4. Other farm work? (Build trellises, netting bag, pollination, etc.)</p>
+                                        <div class="question_others">
+                                            <div class="question_remarks">
+                                                <label class="remarks" for="s4q4_remarks">Remarks:</label>
+                                                <input class="question_remarks_textInput" id="s4q4_remarks" name="s4q4_remarks" type="text">
+                                            </div>  
+                                        </div>
+                                    </div> 
+                                    <div class="modal_submit">
+                                        <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             </div>
