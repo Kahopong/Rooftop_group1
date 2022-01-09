@@ -206,7 +206,7 @@
                                             </div>  
                                         </div>
                                         <div class="modal_submit">
-                                            <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                            <input type="submit" value="Save" class="btn savebtn" id='savebtn-s2' data-bs-dismiss="modal" aria-label="Close">
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@
                                         </div>
                                     </div>
                                     <div class="modal_submit">
-                                        <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                        <input type="submit" value="Save" class="btn savebtn" id='savebtn-s3' data-bs-dismiss="modal" aria-label="Close">
                                     </div>
                                 </div>
                             </div>
@@ -407,7 +407,7 @@
                                         </div>
                                     </div> 
                                     <div class="modal_submit">
-                                        <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                        <input type="submit" value="Save" class="btn savebtn" id='savebtn-s4' data-bs-dismiss="modal" aria-label="Close">
                                     </div>
                                 </div>
                             </div>
@@ -445,10 +445,12 @@
                                     <button type="button" class="closebtn" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times-circle"></i></button>
                                 </div>
                                 <div class="modalheader">
-                                    <h4>Grooming</h4>
+                                    <h4>Harvest</h4>
                                 </div>
-                                <div class="modal-body">
-                                    <!-- S5 - Harvest : Q1 -->
+                                <div class="modal-body" id='s5-modal-body'>
+                                <div id='s5-adding-container'>
+                                <div class='s5-adding'>
+                                    <!-- S5 - Harvest : Q1 -->                      
                                     <div class="question_others question_harvest_row s5q1">
                                         <div>
                                             <p>Crop Type</p>
@@ -481,17 +483,20 @@
                                             <div class="question_dropdown">
                                                 <select class="custom-select" name="s5q3" id="s5q3" >
                                                     <option selected>Please select</option>
-                                                    <option class="options" value="Beet">End Cycle</option>
-                                                    <option class="options" value="Bak Choi">Harvested</option>
+                                                    <option class="options" value="end-cycle">End Cycle</option>
+                                                    <option class="options" value="harvested">Harvested</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="add_harvest_btn">
+                                    <hr>
+                                </div>
+                                </div>
+                                    <div class="add_harvest_btn" id='add_harvest_btn'>
                                         <i class="fas fa-plus-circle"></i>
                                     </div>
                                     <div class="modal_submit">
-                                        <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                        <input type="submit" value="Save" class="btn savebtn" id='savebtn-s5' data-bs-dismiss="modal" aria-label="Close">
                                     </div>
                                 </div>
                             </div>
@@ -559,9 +564,9 @@
                                         <div class="question_others">
                                             <p>2. No. of garden waste bag(s) collected </p>
                                             <div class="num_input">
-                                                <i class="fas fa-minus-circle"></i>
+                                                <i class="fas fa-minus-circle" id='s6q2-minus'></i>
                                                 <p id="s6q2_num">0</p>
-                                                <i class="fas fa-plus-circle"></i>
+                                                <i class="fas fa-plus-circle" id='s6q2-add'></i>
                                             </div>
                                         </div>
                                     </div>
@@ -620,7 +625,7 @@
                                             </div>
                                     </div>
                                     <div class="modal_submit">
-                                        <input type="submit" value="Save" class="btn savebtn" data-bs-dismiss="modal" aria-label="Close">
+                                        <input type="submit" value="Save" class="btn savebtn" id='savebtn-s6' data-bs-dismiss="modal" aria-label="Close">
                                     </div>
                                 </div>
                             </div>
