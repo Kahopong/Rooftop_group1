@@ -1,6 +1,6 @@
 //  S2 - Planting
 exports.up = function (knex) {
-  knex.schema.createTable("planting", (table) => {
+  return knex.schema.createTable("planting", (table) => {
     table.increments();
     table.integer("farmlog_id");
     table.foreign("farmlog_id").references("farmlog.id");
@@ -21,5 +21,5 @@ exports.up = function (knex) {
   });
 };
 exports.down = function (knex) {
-  knex.schema.dropTable("planting");
+  return knex.schema.dropTable("planting");
 };

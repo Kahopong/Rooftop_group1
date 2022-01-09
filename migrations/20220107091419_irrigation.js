@@ -1,6 +1,6 @@
 //  S3 - irrigation
 exports.up = function (knex) {
-  knex.schema.createTable("irrigation", (table) => {
+  return knex.schema.createTable("irrigation", (table) => {
     table.increments();
     table.integer("farmlog_id");
     table.foreign("farmlog_id").references("farmlog.id");
@@ -11,5 +11,5 @@ exports.up = function (knex) {
   });
 };
 exports.down = function (knex) {
-  knex.schema.dropTable("irrigation");
+  return knex.schema.dropTable("irrigation");
 };

@@ -1,6 +1,6 @@
 //  S5 - harvest
 exports.up = function (knex) {
-  knex.schema.createTable("harvest", (table) => {
+  return knex.schema.createTable("harvest", (table) => {
     table.increments();
     table.integer("farmlog_id");
     table.foreign("farmlog_id").references("farmlog.id");
@@ -11,5 +11,5 @@ exports.up = function (knex) {
   });
 };
 exports.down = function (knex) {
-  knex.schema.dropTable("harvest");
+  return knex.schema.dropTable("harvest");
 };
