@@ -28,11 +28,11 @@ require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
-  session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: true,
-  })
+    session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: true,
+    })
 );
 app.use(flash());
 
@@ -47,12 +47,12 @@ app.use("/form", new FormRouter(formService, express).router());
 app.use("/", new ViewRouter(express).router());
 
 app.get("/", (req, res) => {
-  res.render("modal");
+    res.render("index");
 });
 
 // Listen to port
 app.listen(port, () => {
-  console.log(`Listening on ${port}`);
+    console.log(`Listening on ${port}`);
 });
 
 module.exports = app;

@@ -387,7 +387,7 @@ input.question__input {
 }
 
 .modal-dialog {
-    top: 149px;
+    top: 85px;
     margin: 0 auto;
 }
 
@@ -666,7 +666,8 @@ input.question__input {
 /* ########Index Page######## */
 
 button#start-log-btn,
-button#upload-btn {
+button#upload-btn,
+button#restart-btn {
     position: relative;
     background: rgba(66, 193, 198, 0.75);
     overflow: hidden;
@@ -684,7 +685,8 @@ button#upload-btn {
 }
 
 button#start-log-btn:hover,
-button#upload-btn:hover {
+button#upload-btn:hover,
+button#restart-btn:hover {
     background: transparent;
     color: rgba(66, 193, 198, 0.75);
     border: 1px solid rgba(66, 193, 198, 0.75);

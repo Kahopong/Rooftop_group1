@@ -16,16 +16,16 @@ class ViewRouter {
             });
         });
 
-        router.get("/index", (req, res) => {
-            res.render("index");
+        router.get("/modal-form", (req, res) => {
+            res.render("modal-form");
         });
 
         router.get("/upload", (req, res) => {
             res.render("upload");
         });
 
-        router.get("/success-upload", (req, res) => {
-            res.render("success-upload");
+        router.get("/success", (req, res) => {
+            res.render("success");
         });
 
 

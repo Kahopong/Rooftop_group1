@@ -56,13 +56,6 @@ const showPartlyComplete = (i) => {
     $('.completed-btn')[i].classList.remove("d-block");
 }
 
-//Form submit
-$("#farm-log").submit((e) => {
-    e.preventDefault();
-    console.log("submit!");
-    let serializeArray = $("#farm-log").serializeArray();
-    console.log(serializeArray);
-});
 
 // Progress bar
 function activeDot(index) {
@@ -227,7 +220,6 @@ $("#s2q4_no").change(function() {
 const checkInput = (question) => {
     let serializeArray = $("#farm-log").serializeArray();
     let answer = serializeArray.find((a) => a.name == question)
-    console.log(answer)
     return (answer != undefined && answer.value != '' && answer.value != 'Please select')
 }
 
@@ -406,3 +398,66 @@ $('#savebtn-s6').click(() => {
         showPartlyComplete(4)
     }
 });
+
+//Form submit
+$("#farm-log").submit((e) => {
+    e.preventDefault();
+    console.log("submit!");
+});
+
+
+$('#submit-btn').click((e) => {
+    e.preventDefault();
+    let serializeArray = $("#farm-log").serializeArray();
+    console.log(serializeArray);
+    let s1 = [];
+    let s2 = [];
+    let s3 = [];
+    let s4 = [];
+    let s5 = [];
+    let s6 = [];
+    let others = [];
+    for (let i = 0; i < serializeArray.length; i++) {
+        if (serializeArray[i].name.includes('s1')) s1.push(serializeArray[i])
+        else if (serializeArray[i].name.includes('s2')) s2.push(serializeArray[i])
+        else if (serializeArray[i].name.includes('s3')) s3.push(serializeArray[i])
+        else if (serializeArray[i].name.includes('s4')) s4.push(serializeArray[i])
+        else if (serializeArray[i].name.includes('s5')) s5.push(serializeArray[i])
+        else if (serializeArray[i].name.includes('s6')) s6.push(serializeArray[i])
+        else others.push(serializeArray[i])
+    }
+    console.log(s1, s2, s3, s4, s5, s6, others)
+    let allData = [s1, s2, s3, s4, s5, s6, others];
+    let inputArray = []
+    for (let i = 0; i < allData.length; i++) {
+        inputArray.push(allData[i].reduce((obj, input) => {
+            obj[input.name] = input.value;
+            return obj;
+        }, {}))
+    }
+    inputArray[5].s6q2_num = $('#s6q2_num').html()
+    console.log(inputArray)
+
+    axios.post('/form/s1', { form: inputArray[0] }).then((res) => {
+        console.log(res.data)
+    })
+    axios.post('/form/s2', { form: inputArray[1] }).then((res) => {
+        console.log(res.data)
+    })
+    axios.post('/form/s3', { form: inputArray[2] }).then((res) => {
+        console.log(res.data)
+    })
+    axios.post('/form/s4', { form: inputArray[3] }).then((res) => {
+        console.log(res.data)
+    })
+    axios.post('/form/s5', { form: inputArray[4] }).then((res) => {
+        console.log(res.data)
+    })
+    axios.post('/form/s6', { form: inputArray[5] }).then((res) => {
+        console.log(res.data)
+    })
+    axios.post('/form/s7', { form: inputArray[6] }).then((res) => {
+        console.log(res.data)
+    })
+    window.location.href = '/success';
+})
